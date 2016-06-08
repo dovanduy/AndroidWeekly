@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+
+def keystorePropertiesFile = rootProject.file("keystore.properties");
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    applicationId "io.github.cyning.mobilenews"
+    minSdkVersion 15
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+  }
+
+  signingConfigs {
+    release {
+      //打包
+     storeFile file(keystoreProperties['STORE_FILE'])
+      storePassword keystoreProperties['STORE_PASSWORD']
+      keyAlias keystoreProperties['KEY_ALIAS']
+      keyPassword keystoreProperties['KEY_PASSWORD']
+    }
+    debug {
+
+
+////      storeFile file("android.jks")
+////      storePassword "cyning"
+////      keyAlias "cyning"
+////      keyPassword "cyning"
+//      println storePassword
+      storeFile file(keystoreProperties['STORE_FILE'])
+      storePassword keystoreProperties['STORE_PASSWORD']
+      keyAlias keystoreProperties['KEY_ALIAS']
+      keyPassword keystoreProperties['KEY_PASSWORD']
+
+
+    }
+  }
+  sourceSets {
+    main {
+      java.srcDirs = ['src/main/java','src/main/java-gen']
+    }
+  }
+  buildTypes {
+    release {
+      signingConfig signingConfigs.release
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+    debug{
+      signingConfig signingConfigs.debug
+
+      println "-----"+android.signingConfigs.debug.storePassword
+      println "-----"+android.signingConfigs.release.keyAlias
+      println "-----"+android.signingConfigs.release.keyPassword
+
+      minifyEnabled false
+    }
+  }
+}
+
+
+
+
+dependencies {
+  compile 'com.jakewharton:butterknife:7.0.1'
+  compile 'com.facebook.fresco:fresco:0.9.0'
+  compile project(':sharesdk')
+}
+
+dependencies {
+  compile fileTree(include: ['*.jar'], dir: 'libs')
+  testCompile 'junit:junit:4.12'
+  compile project(':Droidcore')
+
+  compile 'com.facebook.stetho:stetho:1.2.0'
+
+
+  compile rootProject.ext.goodleDependencies.design
+  compile "com.squareup.retrofit2:retrofit:2.0.2"
+  compile "com.squareup.retrofit2:converter-gson:2.0.2"
+  compile "com.squareup.retrofit2:adapter-rxjava:2.0.2"
+  compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+  compile "io.reactivex:rxandroid:1.0.1"
+  compile "io.reactivex:rxjava:1.0.16"
+  compile 'com.thefinestartist:finestwebview:1.1.7'
+  compile 'de.greenrobot:greendao:1.3.7'
+  compile 'com.cocosw:bottomsheet:1.+@aar'
+  compile 'com.timehop.stickyheadersrecyclerview:library:0.4.3'
+
+
+}
+
+
+//def Properties props = new Properties()
+//def propFile = new File('signing.properties')
+//if (propFile.canRead()){
+//  props.load(new FileInputStream(propFile))
+//
+//  if (props!=null && props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
+//      props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+//    android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+//    android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+//    android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
+//    android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+//  } else {
+//    println 'signing.properties found but some entries are missing'
+//    android.buildTypes.release.signingConfig = null
+//  }
+//}else {
+//  println 'signing.properties not found'
+//  android.buildTypes.release.signingConfig = null
+//}
+

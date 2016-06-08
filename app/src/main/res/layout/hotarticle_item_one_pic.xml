@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/article_item_background"
+
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivPic1"
+            android:background="@color/article_background_imageholder"
+            android:layout_width="@dimen/pic_witdh"
+            android:layout_height="@dimen/pic_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/space_smaller"
+            android:layout_marginLeft="@dimen/space_small"
+            android:layout_marginTop="@dimen/space_small"
+            android:layout_marginBottom="@dimen/space_small"
+          />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivPic1"
+            android:layout_marginRight="@dimen/space_small"
+            android:layout_toRightOf="@id/ivPic1"
+            android:maxLines="2"
+            android:textAppearance="@style/TextStyle_Title.Article"
+            tools:text="网易财经网易财经网易财经网易财经网易财经" />
+
+        <RelativeLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivPic1"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginRight="@dimen/space_small"
+            android:layout_toRightOf="@+id/ivPic1"
+            android:paddingTop="@dimen/space_small">
+
+            <TextView
+                android:id="@+id/tvFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:textAppearance="@style/TextStyle_SubTitle.Article"
+                tools:text="from netease " />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/space_small"
+                android:layout_toRightOf="@id/tvFrom"
+                android:textAppearance="@style/TextStyle_SubTitle.Article"
+                tools:text="1,200 readed" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

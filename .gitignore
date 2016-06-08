@@ -1,0 +1,50 @@
+#此文件用来忽略提交的配置
+# Eclipse
+.project
+.classpath
+.settings
+#.checkstyle
+
+# IntelliJ IDEA
+#.idea
+*.iml
+test/
+.svn
+app/.metadata
+
+*.ipr
+*.iws
+classes
+gen-external-apklibs
+*.class
+out/
+captures/
+try/
+
+# Gradle
+.idea
+.gradle
+build
+
+# Maven
+target
+release.properties
+pom.xml.*
+
+# Ant
+bin
+gen
+build.xmlgit branch -r
+ant.properties
+local.properties
+#proguard.cfg
+#proguard-project.txt
+/local.properties
+signing.properties
+fabric.*
+
+# Other
+tmp
+.DS_Store
+.gradletasknamecache
+keystore.properties

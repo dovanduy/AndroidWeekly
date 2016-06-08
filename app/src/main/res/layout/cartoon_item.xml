@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cartoon_item_background"
+
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/space_small"
+        android:paddingTop="@dimen/space_small">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivPic1"
+            android:layout_width="@dimen/pic_cartoon_width"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_small"
+            android:layout_marginRight="@dimen/space_small"
+            android:layout_marginTop="@dimen/space_small"
+            android:background="@color/cartoon_background_imageholder"
+            app:viewAspectRatio="0.85" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ivPic1"
+            android:layout_alignBottom="@id/ivPic1"
+            android:layout_toRightOf="@id/ivPic1"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/space_small"
+
+            >
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="cyning是最棒的" />
+
+            <TextView
+                android:id="@+id/tvPv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/tvTitle"
+                />
+
+            <TextView
+                android:id="@+id/tvLastUp"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPv"
+                />
+
+
+            <TextView
+                android:id="@+id/tvStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLastUp"
+                android:maxLines="3" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

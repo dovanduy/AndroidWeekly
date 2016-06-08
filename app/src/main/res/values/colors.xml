@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+  <color name="colorPrimary">#E64A19</color>
+  <color name="colorPrimaryDark">#E64A19</color>
+  <color name="colorAccent">#E64A19</color>
+
+  <color name="colorAccent_trans">#c2e64a19</color>
+
+  <color name="tab_layout">#f1eeeeee</color>
+  <color name="article_item_background">#eeeeee</color>
+  <color name="article_background_imageholder">#c3cbcf</color>
+  <color name="article_text_title">#212121</color>'
+  <color name="article_text_subtitle">#333333</color>
+
+  <color name="cartoon_item_background">#eeeeee</color>
+  <color name="cartoon_background_imageholder">#c3cbcf</color>
+  <color name="cartoon_text_title">#212121</color>'
+  <color name="cartoon_text_subtitle">#333333</color>
+
+  <color name="color_div">#54999999</color>
+
+  <color name="grey200">#eeeeee</color>
+  <color name="tab_text_selected">@color/colorAccent</color>
+  <color name="tab_text_unselected">@color/article_text_title</color>
+  <color name="darkerWhite">#DDDDDD</color>
+
+  <color name="tab_hotarticle">#e51c23</color>
+  <color name="tab_cartoon">#e51c23</color>
+  <color name="tab_music">#e51c23</color>
+</resources>

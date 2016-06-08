@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/article_item_background"
+    >
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:maxLines="2"
+      android:textAppearance="@style/TextStyle_Title.Article"
+
+      android:paddingTop="@dimen/space_small"
+      android:layout_marginLeft="@dimen/space_normal"
+      android:layout_marginRight="@dimen/space_small"
+      tools:text="网易财经网易财经网易财经网易财经网易财经"
+
+      android:id="@+id/tvTitle"
+      />
+
+  <LinearLayout
+      android:id="@+id/llPics"
+      android:layout_below="@id/tvTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/space_normal"
+      android:layout_marginRight="@dimen/space_normal"
+
+      >
+    <com.facebook.drawee.view.SimpleDraweeView
+
+        android:id="@+id/ivPic1"
+        android:background="@color/article_background_imageholder"
+        android:layout_weight="1"
+        android:layout_width="@dimen/pic_witdh"
+        android:layout_height="@dimen/pic_height"
+        android:layout_marginRight="@dimen/space_smaller"
+        android:layout_marginTop="@dimen/space_small"
+        android:layout_marginBottom="@dimen/space_small"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+
+        android:id="@+id/ivPic2"
+        android:layout_weight="1"
+        android:background="@color/article_background_imageholder"
+
+        android:layout_width="@dimen/pic_witdh"
+        android:layout_height="@dimen/pic_height"
+        android:layout_marginTop="@dimen/space_small"
+        android:layout_marginBottom="@dimen/space_small"
+        android:layout_marginRight="@dimen/space_smaller"
+        android:layout_marginLeft="@dimen/space_smaller"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+
+        android:layout_weight="1"
+        android:background="@color/article_background_imageholder"
+
+        android:id="@+id/ivPic3"
+        android:layout_width="@dimen/pic_witdh"
+        android:layout_height="@dimen/pic_height"
+        android:layout_marginLeft="@dimen/space_smaller"
+        android:layout_marginBottom="@dimen/space_small"
+        android:layout_marginTop="@dimen/space_small"
+        />
+
+  </LinearLayout>
+
+  <RelativeLayout
+      android:layout_marginTop="@dimen/space_small"
+      android:layout_marginLeft="@dimen/space_normal"
+      android:layout_marginRight="@dimen/space_normal"
+      android:paddingBottom="@dimen/space_small"
+
+      android:id="@+id/rlBottom"
+      android:layout_below="@id/llPics"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+    <TextView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/tvFrom"
+        tools:text="from netease "
+        android:textAppearance="@style/TextStyle_SubTitle.Article"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/tvDate"
+        tools:text="1,200 readed"
+        android:textAppearance="@style/TextStyle_SubTitle.Article"
+
+        android:layout_marginLeft="@dimen/space_small"
+        android:layout_toRightOf="@id/tvFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+  </RelativeLayout>
+
+
+</RelativeLayout>
