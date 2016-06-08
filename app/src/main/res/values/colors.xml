@@ -9,7 +9,7 @@
   <color name="colorAccent_trans">#c2e64a19</color>
 
   <color name="tab_layout">#f1eeeeee</color>
-  <color name="article_item_background">#eeeeee</color>
+  <color name="article_item_background">#f8f8f8</color>
   <color name="article_background_imageholder">#c3cbcf</color>
   <color name="article_text_title">#212121</color>'
   <color name="article_text_subtitle">#333333</color>

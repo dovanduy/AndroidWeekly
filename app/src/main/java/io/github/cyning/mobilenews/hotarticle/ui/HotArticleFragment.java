@@ -13,6 +13,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
 import io.github.cyning.droidcore.ui.BaseFragment;
+import io.github.cyning.droidcore.utils.DisplayUtil;
 import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.mobilenews.R;
 import io.github.cyning.mobilenews.base.Load;
@@ -81,7 +82,7 @@ public class HotArticleFragment extends BaseFragment
         recViewList.setLayoutManager(manager);
 
         DividerLine dividerLine = new DividerLine(DividerLine.VERTICAL);
-        dividerLine.setSize(1);
+        dividerLine.setSize(DisplayUtil.dp2px(getNeActivity(),4));
         dividerLine.setColor(getResources().getColor(R.color.color_div));
         recViewList.addItemDecoration(dividerLine);
         recViewList.setAdapter(hotAritcleAdapter);

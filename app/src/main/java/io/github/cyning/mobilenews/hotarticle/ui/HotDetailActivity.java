@@ -3,21 +3,26 @@ package io.github.cyning.mobilenews.hotarticle.ui;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
 import com.cocosw.bottomsheet.BottomSheet;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import cyning.me.baseui.ProgressWebView;
 import io.github.cyning.ShareContent;
 import io.github.cyning.WeiXinShare;
+import io.github.cyning.droidcore.log.LayzLog;
 import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.mobilenews.R;
 import io.github.cyning.mobilenews.widgets.swipeback.app.SwipeBackActivity;
@@ -34,10 +39,13 @@ public class HotDetailActivity extends SwipeBackActivity {
     public static final String KEY_HOT_ARTICLE = "Key_hot_article";
     HotArticle hotArticle;
 
-    @Bind(R.id.toolbar) Toolbar toolbar;
-    @Bind(R.id.webLayout) FrameLayout webLayout;
+    @Bind(R.id.toolbar) Toolbar            toolbar;
 
-    WebView mWebView;
+    @Bind(R.id.webContainer)
+    SwipeRefreshLayout swipeRefreshLayout;
+
+
+    ProgressWebView mWebView;
 
     @Override protected void setContentView() {
         super.setContentView();
@@ -52,19 +60,43 @@ public class HotDetailActivity extends SwipeBackActivity {
     @Override public void setupViews() {
         super.setupViews();
 
-        mWebView = new WebView(getApplicationContext());
+        mWebView = v(R.id.webview);
         mWebView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setBackgroundColor(getResources().getColor(R.color.darkerWhite));
-        webLayout.addView(mWebView);
+        mWebView.setWebViewClient(new WebViewClient(){
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return true;
+            }
+
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+                swipeRefreshLayout.setRefreshing(true);
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+               String url =  mWebView.getUrl();
+                mWebView.loadUrl(url);
+            }
+        });
         loadWebUrl();
+
 
     }
 
     private void loadWebUrl() {
-        mWebView.setWebChromeClient(new WebChromeClient(){
-
-        });
         if (hotArticle != null){
             mWebView.loadUrl(hotArticle.getLink());
         }
@@ -73,7 +105,7 @@ public class HotDetailActivity extends SwipeBackActivity {
     @Override protected void setupToolbar() {
         super.setupToolbar();
         if (hotArticle != null){
-            toolbar.setTitle("热文详情");
+            toolbar.setTitle("详情");
         }
 
         setSupportActionBar(toolbar);

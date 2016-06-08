@@ -11,8 +11,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="@dimen/space_normal"
-        android:paddingBottom="@dimen/space_normal"
+        android:paddingTop="@dimen/space_small"
+        android:paddingBottom="@dimen/space_small"
         android:orientation="vertical">
 
         <TextView
@@ -22,7 +22,6 @@
             android:layout_marginLeft="@dimen/space_normal"
 
             android:layout_marginRight="@dimen/space_small"
-            android:layout_marginTop="@dimen/space_small"
             android:maxLines="2"
             android:textAppearance="@style/TextStyle_Title.Article"
 
@@ -49,8 +48,10 @@
 
             <TextView
                 android:id="@+id/tvFrom"
+                android:background="@drawable/bg_corner_cate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="dfd"
 
                 android:layout_alignParentLeft="true"
                 android:textAppearance="@style/TextStyle_SubTitle.Article"

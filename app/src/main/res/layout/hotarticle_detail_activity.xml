@@ -3,26 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_div">
+    android:background="@color/color_div"
+    >
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include layout="@layout/toolbar_default" />
-    </android.support.design.widget.AppBarLayout>
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+    <include layout="@layout/toolbar_default"/>
+  </android.support.design.widget.AppBarLayout>
 
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <FrameLayout
+  <android.support.v4.widget.SwipeRefreshLayout
+      android:id="@+id/webContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/toolbar"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
 
-            android:id="@+id/webLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/space_small" />
-    </android.support.v4.widget.NestedScrollView>
+
+      <cyning.me.baseui.ProgressWebView
+          android:id="@+id/webview"
+          android:layout_margin="@dimen/space_small"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          ></cyning.me.baseui.ProgressWebView>
+
+  </android.support.v4.widget.SwipeRefreshLayout>
 
 </android.support.design.widget.CoordinatorLayout>
