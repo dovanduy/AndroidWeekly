@@ -71,7 +71,7 @@ public class HotArticleFragment extends BaseFragment
         recViewList.setOnLoadMoreListener(new SuperRecycleView.OnLoadMoreListener() {
             @Override public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
                 if (articlePresenter != null) {
-                    articlePresenter.loadArt("", false,hotArticleList.get(hotArticleList.size()-1).getSerNo());
+                    articlePresenter.loadArt(hotArticleList.get(hotArticleList.size()-1).getSerNo(), false,"");
                 }
             }
         });

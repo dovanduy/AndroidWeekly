@@ -32,9 +32,9 @@ public class HotArticlePresenter implements IArticlePresenter {
     /**
      * 得到热文的借口
      */
-    @Override public void loadArt(String timeStap, final boolean isFirst, final String tabId) {
+    @Override public void loadArt(String seriNO, final boolean isFirst, final String tabId) {
         String order = "-seriNo";
-        String where = String.format("{\"seriNo\":{\"$lt\":\"%s\"}}",timeStap);
+        String where = String.format("{\"seriNo\":{\"$lt\":\"%s\"}}",seriNO);
         Observable<HotArticleData> observable = HotArticleClient.getInstance().getHotArticleAPI().getHotArticle(order,where);
 
         observable.map(new Func1<HotArticleData, List<HotArticle>>() {

@@ -11,7 +11,7 @@ android {
   buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
-    applicationId "io.github.cyning.mobilenews"
+    applicationId "io.github.cyning.androidweekly"
     minSdkVersion 15
     targetSdkVersion 23
     versionCode 1
@@ -29,11 +29,7 @@ android {
     debug {
 
 
-////      storeFile file("android.jks")
-////      storePassword "cyning"
-////      keyAlias "cyning"
-////      keyPassword "cyning"
-//      println storePassword
+
       storeFile file(keystoreProperties['STORE_FILE'])
       storePassword keystoreProperties['STORE_PASSWORD']
       keyAlias keystoreProperties['KEY_ALIAS']

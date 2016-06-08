@@ -48,3 +48,13 @@ tmp
 .DS_Store
 .gradletasknamecache
 keystore.properties
+Droidcore/libs/
+Droidcore/src/androidTest/
+Droidcore/src/main/res/drawable/
+app/libs/
+app/src/androidTest/
+baseui/libs/
+baseui/src/main/java/
+baseui/src/main/res/drawable/
+gradlew
+greendaogenerator/libs/
