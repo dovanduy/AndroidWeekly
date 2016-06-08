@@ -27,6 +27,8 @@ import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.mobilenews.R;
 import io.github.cyning.mobilenews.widgets.swipeback.app.SwipeBackActivity;
 
+import static io.github.cyning.droidcore.log.LogTimber.w;
+
 /**
  * @author Cyning
  * @since 2016.03.07
@@ -66,10 +68,10 @@ public class HotDetailActivity extends SwipeBackActivity {
         mWebView.setBackgroundColor(getResources().getColor(R.color.darkerWhite));
         mWebView.setWebViewClient(new WebViewClient(){
 
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                return true;
-            }
+            //@Override
+            //public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            //    return true;
+            //}
 
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -98,7 +100,9 @@ public class HotDetailActivity extends SwipeBackActivity {
 
     private void loadWebUrl() {
         if (hotArticle != null){
-            mWebView.loadUrl(hotArticle.getLink());
+            String url = hotArticle.getLink();
+            w("url %s", url);
+            mWebView.loadUrl(url);
         }
     }
 
