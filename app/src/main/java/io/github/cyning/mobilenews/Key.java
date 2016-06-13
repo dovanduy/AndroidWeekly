@@ -10,9 +10,10 @@ import io.github.cyning.droidcore.utils.Md5Utils;
  */
 public class Key {
 
-
+   public static final String  xKey = "hoOc0q3Bn4NIU9YObBQY0VsL";
 
     public static  String getSign(){
-        throw new NullPointerException("自己定义你的key");
+        long time = System.currentTimeMillis();
+        return Md5Utils.parseStrToMd5L32(time+xKey)+","+time;
     }
 }
