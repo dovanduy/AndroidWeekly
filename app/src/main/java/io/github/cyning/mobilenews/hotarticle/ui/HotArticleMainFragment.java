@@ -13,7 +13,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.github.cyning.droidcore.ui.BaseFragment;
-import io.github.cyning.mobilenews.R;
+import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.hotarticle.model.HotArticleTabSpec;
 
 /**

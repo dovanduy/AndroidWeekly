@@ -15,7 +15,7 @@ import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
 import io.github.cyning.droidcore.ui.BaseFragment;
 import io.github.cyning.droidcore.utils.DisplayUtil;
 import io.github.cyning.greendao.HotArticle;
-import io.github.cyning.mobilenews.R;
+import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.base.Load;
 import io.github.cyning.mobilenews.common.ToastUtils;
 import io.github.cyning.mobilenews.hotarticle.Presenter.HotArticlePresenter;

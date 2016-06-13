@@ -13,12 +13,12 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersAdapter;
+import io.github.cyning.androidweekly.R;
 import io.github.cyning.droidcore.utils.DateUtils;
 import io.github.cyning.droidcore.utils.HtmlUtil;
 import io.github.cyning.droidcore.utils.StringUtils;
 import io.github.cyning.droidcore.utils.ViewUtils;
 import io.github.cyning.greendao.HotArticle;
-import io.github.cyning.mobilenews.R;
 import io.github.cyning.mobilenews.common.CollectionsUtils;
 import java.util.List;
 

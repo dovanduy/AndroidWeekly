@@ -3,6 +3,7 @@ package io.github.cyning.mobilenews;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
 
+import io.github.cyning.androidweekly.BuildConfig;
 import io.github.cyning.droidcore.ui.BaseApplication;
 
 /**

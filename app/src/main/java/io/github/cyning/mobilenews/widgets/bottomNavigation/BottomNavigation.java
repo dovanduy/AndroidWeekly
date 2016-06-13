@@ -32,7 +32,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import io.github.cyning.mobilenews.R;
+import io.github.cyning.androidweekly.R;
 import java.util.Arrays;
 import java.util.List;
 

@@ -14,7 +14,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import io.github.cyning.mobilenews.R;
+import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.cartoon.model.CartoonInfo;
 import io.github.cyning.mobilenews.common.CollectionsUtils;
 

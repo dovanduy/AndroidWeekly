@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.github.cyning.droidcore.ui.BaseFragment;
-import io.github.cyning.mobilenews.R;
+import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.base.Load;
 import io.github.cyning.mobilenews.cartoon.base.ICartoonPresenter;
 import io.github.cyning.mobilenews.cartoon.base.ICartoonView;

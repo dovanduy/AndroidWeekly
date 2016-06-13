@@ -1,8 +1,10 @@
 package io.github.cyning.mobilenews.hotarticle.Presenter;
 
 import io.github.cyning.droidcore.log.LayzLog;
+import io.github.cyning.droidcore.utils.Md5Utils;
 import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.mobilenews.HotArticleApplication;
+import io.github.cyning.mobilenews.Key;
 import io.github.cyning.mobilenews.base.Load;
 import io.github.cyning.mobilenews.hotarticle.client.HotArticleClient;
 import io.github.cyning.mobilenews.database.db.DBManager;
@@ -35,7 +37,8 @@ public class HotArticlePresenter implements IArticlePresenter {
     @Override public void loadArt(String seriNO, final boolean isFirst, final String tabId) {
         String order = "-seriNo";
         String where = String.format("{\"seriNo\":{\"$lt\":\"%s\"}}",seriNO);
-        Observable<HotArticleData> observable = HotArticleClient.getInstance().getHotArticleAPI().getHotArticle(order,where);
+        String sign = Key.getSign();
+        Observable<HotArticleData> observable = HotArticleClient.getInstance().getHotArticleAPI().getHotArticle(order,where,sign);
 
         observable.map(new Func1<HotArticleData, List<HotArticle>>() {
             @Override public List<HotArticle> call(HotArticleData hotArticleData) {

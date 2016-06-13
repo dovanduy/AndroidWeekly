@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 
-import io.github.cyning.mobilenews.R;
+import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.widgets.swipeback.SwipeBackLayout;
 import io.github.cyning.mobilenews.widgets.swipeback.Utils;
 

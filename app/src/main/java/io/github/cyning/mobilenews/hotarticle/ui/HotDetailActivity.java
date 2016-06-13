@@ -24,7 +24,7 @@ import io.github.cyning.ShareContent;
 import io.github.cyning.WeiXinShare;
 import io.github.cyning.droidcore.log.LayzLog;
 import io.github.cyning.greendao.HotArticle;
-import io.github.cyning.mobilenews.R;
+import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.widgets.swipeback.app.SwipeBackActivity;
 
 import static io.github.cyning.droidcore.log.LogTimber.w;

@@ -3,6 +3,7 @@ package io.github.cyning.mobilenews;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.hotarticle.ui.HotArticleFragment;
 import io.github.cyning.mobilenews.hotarticle.ui.HotArticleMainFragment;
 import java.util.Arrays;

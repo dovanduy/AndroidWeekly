@@ -17,7 +17,7 @@ import android.widget.FrameLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.cyning.mobilenews.R;
+import io.github.cyning.androidweekly.R;
 
 public class SwipeBackLayout extends FrameLayout {
     /**

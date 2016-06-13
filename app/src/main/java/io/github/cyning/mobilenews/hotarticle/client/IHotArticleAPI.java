@@ -2,6 +2,7 @@ package io.github.cyning.mobilenews.hotarticle.client;
 
 import io.github.cyning.mobilenews.hotarticle.model.HotArticleData;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Query;
 import rx.Observable;
 
@@ -16,5 +17,5 @@ public interface IHotArticleAPI {
 
 
     @GET("https://api.leancloud.cn/1.1/classes/WeekArticle")
-    Observable<HotArticleData> getHotArticle(@Query("order") String order,@Query("where") String where);
+    Observable<HotArticleData> getHotArticle(@Query("order") String order,@Query("where") String where,@Header("X-LC-Sign")String sign);
 }
