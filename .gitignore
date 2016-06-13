@@ -58,3 +58,4 @@ baseui/src/main/java/
 baseui/src/main/res/drawable/
 gradlew
 greendaogenerator/libs/
+/app/src/main/java/io/github/cyning/mobilenews/Key.java
