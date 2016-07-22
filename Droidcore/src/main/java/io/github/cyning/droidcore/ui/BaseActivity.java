@@ -13,8 +13,11 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import io.github.cyning.droidcore.log.LayzLog;
+import io.github.cyning.droidcore.utils.RxAppService;
 import io.github.cyning.droidcore.utils.StringUtils;
 import io.github.cyning.droidcore.utils.ViewUtils;
+import rx.Subscription;
+
 import java.util.Stack;
 
 /**
@@ -23,7 +26,7 @@ import java.util.Stack;
  * Time  : 下午4:16
  * Desc  : Activity的基类
  */
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity  implements IPageID{
     public boolean isDestroyed = false; // 记录是否已经移除Handler接受回调消息
 
     protected Intent mActvityIntent;
@@ -223,5 +226,20 @@ public class BaseActivity extends AppCompatActivity {
             return activity.getClass().equals(activityClass);
         }
         return false;
+    }
+
+
+    public void add(int pageId, Subscription subscription){
+        RxAppService.getInstance().getCompositeSubscription(pageId).add(subscription);
+    }
+
+
+    public void remove(int pageID){
+        RxAppService.getInstance().removeCompositeSub(pageID);
+    }
+
+    @Override
+    public int getPageId() {
+        return this.hashCode();
     }
 }

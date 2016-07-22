@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
@@ -23,6 +24,7 @@ import cyning.me.baseui.ProgressWebView;
 import io.github.cyning.ShareContent;
 import io.github.cyning.WeiXinShare;
 import io.github.cyning.droidcore.log.LayzLog;
+import io.github.cyning.droidcore.utils.StringUtils;
 import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.widgets.swipeback.app.SwipeBackActivity;
@@ -130,10 +132,25 @@ public class HotDetailActivity extends SwipeBackActivity {
         int id = item.getItemId();
         if (id == R.id.share){
 
-            showBottom();
+           share();
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void share() {
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        if (StringUtils.hasText(hotArticle.getImgUrl())){
+            Uri imageUri = Uri.parse("http://stacktoheap.com/images/stackoverflow.png");
+            sharingIntent.setType("image/png");
+            sharingIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+        }
+        sharingIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, hotArticle.getTitle());
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, mWebView.getUrl());
+        startActivity(Intent.createChooser(sharingIntent,  getString(R.string.share_menu)));
     }
 
 

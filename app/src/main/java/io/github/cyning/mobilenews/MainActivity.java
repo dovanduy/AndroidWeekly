@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity {
 
 
         if (savedInstanceState == null){
-            HotArticleFragment mainFragment = new HotArticleFragment();
+            HotArticleMainFragment mainFragment = new HotArticleMainFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content,mainFragment,"Main")
             .commitAllowingStateLoss();
         }

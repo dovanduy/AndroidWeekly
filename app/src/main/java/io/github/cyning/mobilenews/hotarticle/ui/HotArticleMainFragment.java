@@ -49,6 +49,8 @@ public class HotArticleMainFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         List<HotArticleTabSpec> tabSpecs = new ArrayList<>();
+        tabSpecs.add(new HotArticleTabSpec("郭林","2"));
+        tabSpecs.add(new HotArticleTabSpec("脉脉","1"));
 
         if (pagerAdapter == null) {
             pagerAdapter = new HotArticlePagerAdapter(getChildFragmentManager(), tabSpecs);

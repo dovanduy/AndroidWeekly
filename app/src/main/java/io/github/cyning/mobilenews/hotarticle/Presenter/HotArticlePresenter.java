@@ -36,7 +36,7 @@ public class HotArticlePresenter implements IArticlePresenter {
      */
     @Override public void loadArt(String seriNO, final boolean isFirst, final String tabId) {
         String order = "-seriNo";
-        String where = String.format("{\"seriNo\":{\"$lt\":\"%s\"}}",seriNO);
+        String where = String.format("{\"seriNo\":{\"$lt\":\"%s\"},\"site\":{\"$in\":[\"%s\"]}}",seriNO,tabId);
         String sign = Key.getSign();
         Observable<HotArticleData> observable = HotArticleClient.getInstance().getHotArticleAPI().getHotArticle(order,where,sign);
 

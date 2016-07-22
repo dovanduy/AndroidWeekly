@@ -5,17 +5,22 @@ def keystorePropertiesFile = rootProject.file("keystore.properties");
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
+def getVersionCode(){
+  return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
 
+  def code = getVersionCode().toInteger()
   defaultConfig {
     applicationId "io.github.cyning.androidweekly"
     minSdkVersion 15
     targetSdkVersion 23
-    versionCode 1
-    versionName "1.0"
+    versionCode code
+    versionName "1.0.1"
   }
 
   signingConfigs {
@@ -80,12 +85,7 @@ dependencies {
 
 
   compile rootProject.ext.goodleDependencies.design
-  compile "com.squareup.retrofit2:retrofit:2.0.2"
-  compile "com.squareup.retrofit2:converter-gson:2.0.2"
-  compile "com.squareup.retrofit2:adapter-rxjava:2.0.2"
-  compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
-  compile "io.reactivex:rxandroid:1.0.1"
-  compile "io.reactivex:rxjava:1.0.16"
+
   compile 'com.thefinestartist:finestwebview:1.1.7'
   compile 'de.greenrobot:greendao:1.3.7'
   compile 'com.cocosw:bottomsheet:1.+@aar'

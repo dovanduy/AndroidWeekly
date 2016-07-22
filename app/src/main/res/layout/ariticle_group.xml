@@ -13,7 +13,7 @@
        android:id="@+id/tvGroupName"
        android:layout_margin="@dimen/space_small"
        android:lineSpacingMultiplier="2"
-       android:textAppearance="@style/TextStyle_Title.White"
+       android:textAppearance="@style/TextStyle_SubTitle.Accent"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:text="sailorcast"

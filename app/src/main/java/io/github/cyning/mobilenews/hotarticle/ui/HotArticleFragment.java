@@ -14,6 +14,7 @@ import butterknife.ButterKnife;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
 import io.github.cyning.droidcore.ui.BaseFragment;
 import io.github.cyning.droidcore.utils.DisplayUtil;
+import io.github.cyning.droidcore.utils.StringUtils;
 import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.base.Load;
@@ -72,7 +73,8 @@ public class HotArticleFragment extends BaseFragment
         recViewList.setOnLoadMoreListener(new SuperRecycleView.OnLoadMoreListener() {
             @Override public void onMoreAsked(int overallItemsCount, int itemsBeforeMore, int maxLastVisiblePosition) {
                 if (articlePresenter != null) {
-                    articlePresenter.loadArt(hotArticleList.get(hotArticleList.size()-1).getSerNo(), false,"");
+                    HotArticle article = hotArticleList.get(hotArticleList.size()-1);
+                    loadDataList(article.getSerNo());
                 }
             }
         });
@@ -109,8 +111,18 @@ public class HotArticleFragment extends BaseFragment
         if (hasExist){
             articlePresenter.loadCacheList();
         }else {
-            articlePresenter.loadArt(System.currentTimeMillis() + "", true,null);
+            loadDataList(null);
         }
+    }
+
+
+    private void loadDataList(String seriNo){
+        boolean isFreshFromStart = false;
+        if (!StringUtils.hasText(seriNo)){
+            seriNo = System.currentTimeMillis() + "";
+            isFreshFromStart = true;
+        }
+        articlePresenter.loadArt(seriNo, isFreshFromStart,tab.getTabId());
     }
 
     @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -168,7 +180,7 @@ public class HotArticleFragment extends BaseFragment
 
     @Override public void onRefresh() {
         if (articlePresenter != null) {
-            articlePresenter.loadArt(System.currentTimeMillis() + "", true,"2");
+            loadDataList(null);
         }
     }
 
