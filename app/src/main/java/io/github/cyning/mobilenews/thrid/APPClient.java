@@ -1,8 +1,6 @@
 package io.github.cyning.mobilenews.thrid;
 
 import io.github.cyning.mobilenews.base.OkHttpAPIClient;
-import io.github.cyning.mobilenews.hotarticle.client.HotArticleClient;
-import io.github.cyning.mobilenews.hotarticle.client.IHotArticleAPI;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;

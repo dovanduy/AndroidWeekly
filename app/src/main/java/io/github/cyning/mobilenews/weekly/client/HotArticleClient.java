@@ -1,4 +1,4 @@
-package io.github.cyning.mobilenews.hotarticle.client;
+package io.github.cyning.mobilenews.weekly.client;
 
 import io.github.cyning.mobilenews.base.OkHttpAPIClient;
 import retrofit2.Retrofit;

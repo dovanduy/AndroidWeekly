@@ -1,4 +1,4 @@
-package io.github.cyning.mobilenews.hotarticle.model;
+package io.github.cyning.mobilenews.weekly.model;
 
 /**
  * @author Cyning

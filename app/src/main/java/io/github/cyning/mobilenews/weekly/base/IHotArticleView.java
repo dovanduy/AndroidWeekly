@@ -1,4 +1,4 @@
-package io.github.cyning.mobilenews.hotarticle.base;
+package io.github.cyning.mobilenews.weekly.base;
 
 import io.github.cyning.mobilenews.base.IView;
 import io.github.cyning.mobilenews.base.Load;

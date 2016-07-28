@@ -1,4 +1,4 @@
-package io.github.cyning.mobilenews.hotarticle.model;
+package io.github.cyning.mobilenews.weekly.model;
 
 import io.github.cyning.greendao.HotArticle;
 import java.util.List;

@@ -1,16 +1,15 @@
-package io.github.cyning.mobilenews.hotarticle.Presenter;
+package io.github.cyning.mobilenews.weekly.Presenter;
 
 import io.github.cyning.droidcore.log.LayzLog;
-import io.github.cyning.droidcore.utils.Md5Utils;
 import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.mobilenews.HotArticleApplication;
 import io.github.cyning.mobilenews.Key;
 import io.github.cyning.mobilenews.base.Load;
-import io.github.cyning.mobilenews.hotarticle.client.HotArticleClient;
+import io.github.cyning.mobilenews.weekly.client.HotArticleClient;
 import io.github.cyning.mobilenews.database.db.DBManager;
-import io.github.cyning.mobilenews.hotarticle.base.IArticlePresenter;
-import io.github.cyning.mobilenews.hotarticle.base.IHotArticleView;
-import io.github.cyning.mobilenews.hotarticle.model.HotArticleData;
+import io.github.cyning.mobilenews.weekly.base.IArticlePresenter;
+import io.github.cyning.mobilenews.weekly.base.IHotArticleView;
+import io.github.cyning.mobilenews.weekly.model.HotArticleData;
 import java.util.List;
 import rx.Observable;
 import rx.Subscriber;

@@ -38,7 +38,7 @@
     </activity>
 
     <activity
-        android:name="io.github.cyning.mobilenews.hotarticle.ui.HotDetailActivity"
+        android:name="io.github.cyning.mobilenews.weekly.ui.HotDetailActivity"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme.SwipeBack" />

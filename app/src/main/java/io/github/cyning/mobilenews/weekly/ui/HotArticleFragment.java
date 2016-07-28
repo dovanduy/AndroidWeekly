@@ -1,4 +1,4 @@
-package io.github.cyning.mobilenews.hotarticle.ui;
+package io.github.cyning.mobilenews.weekly.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TabHost;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
@@ -19,10 +19,10 @@ import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.androidweekly.R;
 import io.github.cyning.mobilenews.base.Load;
 import io.github.cyning.mobilenews.common.ToastUtils;
-import io.github.cyning.mobilenews.hotarticle.Presenter.HotArticlePresenter;
-import io.github.cyning.mobilenews.hotarticle.base.IArticlePresenter;
-import io.github.cyning.mobilenews.hotarticle.base.IHotArticleView;
-import io.github.cyning.mobilenews.hotarticle.model.HotArticleTabSpec;
+import io.github.cyning.mobilenews.weekly.Presenter.HotArticlePresenter;
+import io.github.cyning.mobilenews.weekly.base.IArticlePresenter;
+import io.github.cyning.mobilenews.weekly.base.IHotArticleView;
+import io.github.cyning.mobilenews.weekly.model.HotArticleTabSpec;
 import io.github.cyning.mobilenews.widgets.DividerLine;
 import io.github.cyning.mobilenews.widgets.SuperRecycleView;
 import java.util.ArrayList;

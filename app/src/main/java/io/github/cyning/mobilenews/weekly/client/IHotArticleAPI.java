@@ -1,9 +1,9 @@
-package io.github.cyning.mobilenews.hotarticle.client;
+package io.github.cyning.mobilenews.weekly.client;
 
 import java.util.List;
 
-import io.github.cyning.mobilenews.hotarticle.model.HotArticleData;
-import io.github.cyning.mobilenews.hotarticle.model.PatchBean;
+import io.github.cyning.mobilenews.weekly.model.HotArticleData;
+import io.github.cyning.mobilenews.weekly.model.PatchBean;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Query;

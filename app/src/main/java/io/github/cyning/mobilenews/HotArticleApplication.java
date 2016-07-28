@@ -12,8 +12,8 @@ import io.github.cyning.droidcore.utils.APPUtils;
 import io.github.cyning.droidcore.utils.RxSchedulers;
 import io.github.cyning.mobilenews.base.NESubsciber;
 import io.github.cyning.mobilenews.common.CollectionsUtils;
-import io.github.cyning.mobilenews.hotarticle.client.HotArticleClient;
-import io.github.cyning.mobilenews.hotarticle.model.PatchBean;
+import io.github.cyning.mobilenews.weekly.client.HotArticleClient;
+import io.github.cyning.mobilenews.weekly.model.PatchBean;
 
 /**
  * @author Cyning

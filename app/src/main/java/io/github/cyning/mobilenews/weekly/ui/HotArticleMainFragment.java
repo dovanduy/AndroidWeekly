@@ -1,4 +1,4 @@
-package io.github.cyning.mobilenews.hotarticle.ui;
+package io.github.cyning.mobilenews.weekly.ui;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -14,7 +14,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import io.github.cyning.droidcore.ui.BaseFragment;
 import io.github.cyning.androidweekly.R;
-import io.github.cyning.mobilenews.hotarticle.model.HotArticleTabSpec;
+import io.github.cyning.mobilenews.weekly.model.HotArticleTabSpec;
 
 /**
  * @author Cyning

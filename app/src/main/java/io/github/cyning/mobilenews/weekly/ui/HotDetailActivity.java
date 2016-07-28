@@ -1,7 +1,6 @@
-package io.github.cyning.mobilenews.hotarticle.ui;
+package io.github.cyning.mobilenews.weekly.ui;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -10,18 +9,13 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.FrameLayout;
-
-import com.cocosw.bottomsheet.BottomSheet;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import cyning.me.baseui.ProgressWebView;
-import io.github.cyning.droidcore.log.LayzLog;
 import io.github.cyning.droidcore.utils.StringUtils;
 import io.github.cyning.greendao.HotArticle;
 import io.github.cyning.androidweekly.R;

@@ -1,4 +1,4 @@
-package io.github.cyning.mobilenews.hotarticle.ui;
+package io.github.cyning.mobilenews.weekly.ui;
 
 import android.content.Context;
 import android.net.Uri;

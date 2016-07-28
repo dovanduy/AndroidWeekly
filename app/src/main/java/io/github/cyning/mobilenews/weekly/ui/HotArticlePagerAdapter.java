@@ -1,10 +1,10 @@
-package io.github.cyning.mobilenews.hotarticle.ui;
+package io.github.cyning.mobilenews.weekly.ui;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import io.github.cyning.mobilenews.common.CollectionsUtils;
-import io.github.cyning.mobilenews.hotarticle.model.HotArticleTabSpec;
+import io.github.cyning.mobilenews.weekly.model.HotArticleTabSpec;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
