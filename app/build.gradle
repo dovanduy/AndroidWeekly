@@ -20,7 +20,7 @@ android {
     minSdkVersion 15
     targetSdkVersion 23
     versionCode code
-    versionName "1.0.1"
+    versionName "1.0.2"
   }
 
   signingConfigs {
@@ -72,7 +72,6 @@ android {
 dependencies {
   compile 'com.jakewharton:butterknife:7.0.1'
   compile 'com.facebook.fresco:fresco:0.9.0'
-  compile project(':sharesdk')
   compile project(':baseui')
 }
 

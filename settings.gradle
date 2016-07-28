@@ -1,1 +1,1 @@
-include ':app', ':Droidcore', ':greendaogenerator', ':sharesdk', ':baseui'
+include ':app', ':Droidcore', ':greendaogenerator',':baseui'

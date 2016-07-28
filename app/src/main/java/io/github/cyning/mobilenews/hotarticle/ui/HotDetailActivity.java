@@ -21,8 +21,6 @@ import com.cocosw.bottomsheet.BottomSheet;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import cyning.me.baseui.ProgressWebView;
-import io.github.cyning.ShareContent;
-import io.github.cyning.WeiXinShare;
 import io.github.cyning.droidcore.log.LayzLog;
 import io.github.cyning.droidcore.utils.StringUtils;
 import io.github.cyning.greendao.HotArticle;
@@ -154,38 +152,6 @@ public class HotDetailActivity extends SwipeBackActivity {
     }
 
 
-    BottomSheet bottomSheet = null;
-
-    private void showBottom() {
-        if (bottomSheet == null) {
-            bottomSheet = new BottomSheet.Builder(this).title(R.string.share_menu)
-                    .sheet(R.menu.hot_article_share_menu)
-                    .grid()
-                    .listener(new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, final int which) {
-
-                    shareToWx(which);
-                }
-            }).build();
-        }
-        bottomSheet.show();
-
-    }
-
-    private void shareToWx(int which) {
-        ShareContent shareContent = new ShareContent()
-                .setTitle(hotArticle.getTitle())
-                .setDes(hotArticle.getAbstractX())
-                .setUrl(hotArticle.getLink());
-        if (which == R.id.share_session){
-            WeiXinShare wxShare = new WeiXinShare(false);
-            wxShare.share(getNeActivity(),shareContent);
-        }else if (which == R.id.share_timeline){
-            WeiXinShare wxShare = new WeiXinShare(true);
-            wxShare.share(getNeActivity(),shareContent);
-        }
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
