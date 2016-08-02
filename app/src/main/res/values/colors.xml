@@ -6,9 +6,11 @@
   <color name="colorPrimaryDark">#E64A19</color>
   <color name="colorAccent">#E64A19</color>
 
+  <color name="txt_clr_selected">#fce537</color>
+
   <color name="colorAccent_trans">#dde6dede</color>
 
-  <color name="tab_layout">@color/darkerWhite</color>
+  <color name="tab_layout">@color/colorAccent</color>
   <color name="article_item_background">#f8f8f8</color>
   <color name="article_background_imageholder">#c3cbcf</color>
   <color name="article_text_title">#333333</color>'
@@ -22,8 +24,8 @@
   <color name="color_div">#54999999</color>
 
   <color name="grey200">#eeeeee</color>
-  <color name="tab_text_selected">@color/colorAccent</color>
-  <color name="tab_text_unselected">@color/text_gray</color>
+  <color name="tab_text_selected">@color/darkerWhite</color>
+  <color name="tab_text_unselected">#c6bfbf</color>
   <color name="darkerWhite">#DDDDDD</color>
 
   <color name="tab_hotarticle">#e51c23</color>
